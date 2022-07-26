@@ -25,12 +25,18 @@ export default {
             albums: [],
         }
     },
-    mounted() {
-        axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((res) => {
+    methods: {
+        getAlbums() {
+            axios.get("https://flynn.boolean.careers/exercises/api/array/music").then((res) => {
 
-            this.albums = res.data.response;
-            console.log(this.albums)
-        });
+                this.albums = res.data.response;
+
+            });
+        }
+    },
+
+    mounted() {
+        this.getAlbums();
     }
 }
 </script>

@@ -13,6 +13,7 @@ export default {
 
 header {
     background-color: $header_bg_color;
+    padding: 10px;
 
     img {
         height: 100px;
